@@ -1,26 +1,27 @@
 import { createStackNavigator } from '@react-navigation/stack';
+import CombinedAnimation from './components/animation/CombinedAnimation';
+import GestureAnimation from './components/animation/GestureAnimation';
+import ReanimatedCoreConcepts from './components/animation/ReanimatedCoreConcepts';
 import DrawerNavigationDemo from './components/drawer/DrawerNavigationDemo';
 import StackNavigationDemo from './components/stack/StackNavigationDemo';
 import TabNavigationDemo from './components/tab/TabNavigationDemo';
+import BasicAnimation from './screens/animation/BasicAnimation';
+import Interpolation from './screens/animation/Interpolation';
+import Basic from './screens/Basic';
+import AnimationIndex from './screens/categories/AnimationIndex';
+import BasicsIndex from './screens/categories/BasicsIndex';
+import InteractionsIndex from './screens/categories/InteractionsIndex';
+import ListsIndex from './screens/categories/ListsIndex';
+import NavigationIndex from './screens/categories/NavigationIndex';
+import OtherIndex from './screens/categories/OtherIndex';
 import DataFetching from './screens/DataFetching';
 import FlatListScreen from './screens/FlatListScreen';
 import HomeScreen from './screens/Home';
 import ModalScreen from './screens/ModalScreen';
 import PullToRefresh from './screens/PullToRefresh';
 import SectionListScreen from './screens/SectionListScreen';
-import TouchableScreen from './screens/TouchableScreen';
 import ThemeScreen from './screens/ThemeScreen';
-import BasicAnimation from './screens/animation/BasicAnimation';
-import Interpolation from './screens/animation/Interpolation';
-import Basic from './screens/Basic';
-import CombinedAnimation from './components/animation/CombinedAnimation';
-import GestureAnimation from './components/animation/GestureAnimation';
-import BasicsIndex from './screens/categories/BasicsIndex';
-import ListsIndex from './screens/categories/ListsIndex';
-import AnimationIndex from './screens/categories/AnimationIndex';
-import InteractionsIndex from './screens/categories/InteractionsIndex';
-import OtherIndex from './screens/categories/OtherIndex';
-import NavigationIndex from './screens/categories/NavigationIndex';
+import TouchableScreen from './screens/TouchableScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -45,6 +46,7 @@ export type RootStackParamList = {
   InterpolationDemo: undefined;
   CombinedAnimationDemo: undefined;
   GestureAnimationDemo: undefined;
+  ReanimatedCoreConceptsDemo: undefined;
 };
 
 //create stack navigator
@@ -116,6 +118,10 @@ const RootNavigator: React.FC = () => {
         component={CombinedAnimation}
       />
       <Stack.Screen name="GestureAnimationDemo" component={GestureAnimation} />
+      <Stack.Screen
+        name="ReanimatedCoreConceptsDemo"
+        component={ReanimatedCoreConcepts}
+      />
     </Stack.Navigator>
   );
 };
